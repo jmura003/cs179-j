@@ -28,7 +28,7 @@ int sonar_no = 0;
 
 void sensors(const int, const int, const int);
 void buzzer_logic(const int);
-int PrioritySonar(const int,const int,const int,const int);
+int PrioritySonar(const long *);
 
 
 void setup() {
