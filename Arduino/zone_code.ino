@@ -2,7 +2,7 @@
 //echo pin needs pwm
 
 #define sonars 4 //number of sonars 
-#define MAX_DIST 60.0
+#define MAX_DIST 100.0
 const int trigPin1 = 12;
 const int echoPin1 = 10;
 const int trigPin2 = 7;
@@ -158,6 +158,8 @@ void buzzer_logic(const int s_d1){
       Serial.print("sonar number: ");
       Serial.println(sonar_no);
       if(flag > 0){
+        Serial.print("s_distance1: ");
+        Serial.println(s_distance1);
         sonar_zone = zone_check(s_distance1);
         Serial.print("current zone: ");
           Serial.println(sonar_zone);
@@ -233,8 +235,24 @@ int PrioritySonar(const long * distances){
 int zone_check(const long s_d1){
   if(s_d1 > 0.0 && s_d1 < 10.0)
       return 1;
-  else if(s_d1 >= 10.0 && s_d1 < 60.0)
+  else if(s_d1 >= 10.0 && s_d1 < 20.0)
       return 2;
+  else if(s_d1 >= 20.0 && s_d1 < 30.0)
+      return 3;
+  else if(s_d1 >=30.0 && s_d1 < 40.0)
+      return 4;
+  else if(s_d1 >= 40.0 && s_d1 < 50.0)
+      return 5;
+  else if(s_d1 >= 50.0 && s_d1 < 60.0)
+      return 6;
+  else if(s_d1 >= 60.0 && s_d1 < 70.0)
+      return 7;
+  else if(s_d1 >= 70.0 && s_d1 < 80.0)
+      return 8;
+  else if(s_d1 >= 80.0 && s_d1 < 90.0)
+      return 9;
+  else if(s_d1 >= 90.0 && s_d1 < 100.0)
+      return 10;
   else
       return -1; //error
   
