@@ -4,7 +4,7 @@
 
 #include <SPI.h>
 #include <SD.h>
-#define SD_ChipSelectPin 4
+#define SD_ChipSelectPin A0
 
 TMRpcm tmrpcm;
 
@@ -18,7 +18,7 @@ void setup() {
     return;
   }
 
-  tmrpcm.setVolume(4);
+  tmrpcm.setVolume(5);
 //  tmrpcm.play("right.wav");
 ////  delay(1000);
 ////  tmrpcm.play("left.wav");
