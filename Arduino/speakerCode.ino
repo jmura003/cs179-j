@@ -18,8 +18,14 @@ void setup() {
     return;
   }
 
-  tmrpcm.setVolume(2);
-  tmrpcm.play("test.wav");
+  tmrpcm.setVolume(4);
+//  tmrpcm.play("right.wav");
+////  delay(1000);
+////  tmrpcm.play("left.wav");
+////  delay(1000);
+////  tmrpcm.play("behind.wav");
+////  delay(1000);
+////  tmrpcm.play("front.wav");
 }
 // put your setup code here, to run once:
 
@@ -30,6 +36,14 @@ void loop() {
     delay(100);
     noTone(speaker);
   */
+  tmrpcm.play("right.wav");
+  delay(1000);
+  tmrpcm.play("left.wav");
+  delay(1000);
+  tmrpcm.play("behind.wav");
+  delay(1000);
+  tmrpcm.play("front.wav");
+  delay(1000);
   // put your main code here, to run repeatedly:
 
 }
