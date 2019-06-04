@@ -2,22 +2,26 @@
 //echo pin needs pwm
 
 #define sonars 4 //number of sonars 
-#define MAX_DIST 120.0
-const int trigPin1 = 12;
-const int echoPin1 = 10;
+#define MAX_DIST 150.0
+const int trigPin1 = 8; //changed 12 to 8
+const int echoPin1 = 9; //changed 10 to 9
 const int trigPin2 = 7;
 const int echoPin2 = 6;
 const int trigPin3 = 2;
 const int echoPin3 = 3;
 const int trigPin4 = 4;
 const int echoPin4 = 5;
-const int buzzer = 11;
+const int buzzer = 11; //
 
+//esmerald needs 11, 12, 13
 bool same_sonar = false;
 /*haha*/ long boi[2];
 
-int trigArray[4] = {12, 7, 2, 4}; //array of the trig pins accessilbe via sonar_no - 1
-int echoArray[4] = {10, 6, 3, 5}; //same thing as trigArray but for echo
+//int trigArray[4] = {12, 7, 2, 4}; //array of the trig pins accessilbe via sonar_no - 1
+int trigArray[4] = {8, 7, 2, 4}; //array of the trig pins accessilbe via sonar_no - 1
+
+//int echoArray[4] = {10, 6, 3, 5}; //same thing as trigArray but for echo
+int echoArray[4] = {9, 6, 3, 5}; //same thing as trigArray but for echo
 
 int flag = 0;
 
@@ -232,24 +236,25 @@ int PrioritySonar(const long * distances){
       return i + 1;
 }
 
+//checking zone size of 25
 int zone_check(const long s_d1){
-  if(s_d1 > 0.0 && s_d1 < 15.0)
+  if(s_d1 > 0.0 && s_d1 < 25.0)
       return 1;
-  else if(s_d1 >= 15.0 && s_d1 < 30.0)
+  else if(s_d1 >= 25.0 && s_d1 < 50.0)
       return 2;
-  else if(s_d1 >= 30.0 && s_d1 < 45.0)
+  else if(s_d1 >= 50.0 && s_d1 < 75.0)
       return 3;
-  else if(s_d1 >=45.0 && s_d1 < 60.0)
+  else if(s_d1 >= 75.0 && s_d1 < 100.0)
       return 4;
-  else if(s_d1 >= 60.0 && s_d1 < 75.0)
+  else if(s_d1 >= 100.0 && s_d1 < 125.0)
       return 5;
-  else if(s_d1 >= 75.0 && s_d1 < 90.0)
+  else if(s_d1 >= 125.0 && s_d1 < 150.0)
       return 6;
-  else if(s_d1 >= 90.0 && s_d1 < 105.0)
+ /* else if(s_d1 >= 90.0 && s_d1 < 105.0)
       return 7;
   else if(s_d1 >= 105.0 && s_d1 < 120.0)
       return 8;
- /* else if(s_d1 >= 80.0 && s_d1 < 90.0)
+  else if(s_d1 >= 80.0 && s_d1 < 90.0)
       return 9;
   else if(s_d1 >= 90.0 && s_d1 < 100.0)
       return 10;*/
