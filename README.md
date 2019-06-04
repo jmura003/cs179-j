@@ -14,4 +14,7 @@ Face detection is used in order to store people in a contact list form and infor
 		- Speaker Arduino wiring
 - Johnathan Murad
 - Richard Rangel
+		- Helped implement multiple sonar sensor code
+		- Helped implement zoning functionality in the case of movement on the same sonar
+		- Helped construct mock display for the system
 - Tasmiyah Qazi
