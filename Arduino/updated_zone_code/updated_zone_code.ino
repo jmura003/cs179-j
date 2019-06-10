@@ -38,7 +38,7 @@ bool done_init = false;
 
 //int buzzer_tones[] = {500, 1000, 1500, 2000}; // each element represents sonars #s 1-4
 
-char * buzzer_tones[] = {"right.wav", "front.wav", "left.wav", "behind.wav"};
+char * buzzer_tones[] = {"right.wav", "left.wav", "behind.wav", "front.wav"};
 
 long init_dist[4];
 

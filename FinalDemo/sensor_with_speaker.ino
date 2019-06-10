@@ -1,3 +1,12 @@
+#include <pcmConfig.h>
+#include <pcmRF.h>
+#include <TMRpcm.h>
+
+#include <SPI.h>
+#include <SD.h>
+#define SD_ChipSelectPin A0
+
+TMRpcm tmrpcm;
 //trigger pin does not need pwm
 //echo pin needs pwm
 
@@ -27,7 +36,9 @@ int flag = 0;
 
 bool done_init = false;
 
-int buzzer_tones[] = {500, 1000, 1500, 2000}; // each element represents sonars #s 1-4
+//int buzzer_tones[] = {500, 1000, 1500, 2000}; // each element represents sonars #s 1-4
+
+char * buzzer_tones[] = {"right.wav", "front.wav", "left.wav", "behind.wav"};
 
 long init_dist[4];
 
@@ -47,6 +58,7 @@ int zone_check(const long);
 
 void setup() {
   // put your setup code here, to run once:
+  tmrpcm.speakerPin = 10;
   pinMode(trigPin1, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin1, INPUT); // Sets the echoPin as an Input
   pinMode(trigPin2, OUTPUT);
@@ -59,6 +71,12 @@ void setup() {
   for(int i = 0; i < 10; i++)
     sonar_list[i] = 1000;
   Serial.begin(9600); // Starts the serial communication
+  if (!SD.begin(SD_ChipSelectPin))
+  {
+    Serial.println("SD fail");
+    return;
+  }
+  tmrpcm.setVolume(5);
 
 }
 
@@ -151,13 +169,20 @@ int sensors2(const int trigPin, const int echoPin, const int sonar_no) {
 void buzzer_logic(const int s_d1){
     bool diff_sonar = true;
     if(!same_sonar){
-      if(s_d1 < MAX_DIST){
-        for(int i = 0; i < 4; i++){
-          tone(buzzer,buzzer_tones[sonar_no-1]);
-          delay(100);
-          noTone(buzzer);
-          delay(50);
-        }
+      if(s_d1 < MAX_DIST)
+      {
+        //if(flag == 1)
+        //{
+          tmrpcm.play(buzzer_tones[sonar_no-1]);
+          delay(500);
+        //}
+        
+//        for(int i = 0; i < 4; i++){
+//          tone(buzzer,buzzer_tones[sonar_no-1]);
+//          delay(100);
+//          noTone(buzzer);
+//          delay(50);
+//        }
       }
       Serial.print("sonar number: ");
       Serial.println(sonar_no);
