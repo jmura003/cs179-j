@@ -23,3 +23,7 @@ Face detection is used in order to store people in a contact list form and infor
 		- Helped implement zoning functionality in the case of movement on the same sonar
 		- Helped construct mock display for the system
 - Tasmiyah Qazi
+		- Raspberry Pi facial recognition with OpenCV and camera functionality
+		- Raspberry Pi speaker interface and code
+		- Single sonar sensor functionality and code
+		- Helped with SD card module interface with Arduino Uno
