@@ -13,6 +13,11 @@ Face detection is used in order to store people in a contact list form and infor
 		- Helped with raspberry pi setup
 		- Speaker Arduino wiring
 - Johnathan Murad
+		- Helped implement Sonar priority
+		- Helped implement zoning to send another sound cue when they move forward or backward
+		- Helped implement the buzzer logic to make the system stop issuing sound cues when the sonar
+		with the highest priority remains in the same position
+		- Helped setup Raspbian and the camera
 - Richard Rangel
 		- Helped implement multiple sonar sensor code
 		- Helped implement zoning functionality in the case of movement on the same sonar
