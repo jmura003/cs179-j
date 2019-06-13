@@ -10,23 +10,24 @@ These are the final versions of our code used in our final demonstration. Third 
 
 # Authors
 
-- Esmeralda Mendoza 
-		- Helped with multiple sonar sensor wiring
-		- Helped with raspberry pi setup
-		- Speaker Arduino wiring
-- Johnathan Murad
-		- Helped implement Sonar priority
-		- Helped implement zoning to send another sound cue when they move forward or backward
-		- Helped implement the buzzer logic to make the system stop issuing sound cues when the sonar
+* Esmeralda Mendoza 
+		* Helped with multiple sonar sensor wiring
+		* Helped with multiple sonar sensor functionality
+		* Helped with raspberry pi setup and facial recongition
+		* Speaker, 3.5mm Audio Jack, SD card reader Arduino wiring and code functionality
+* Johnathan Murad
+		* Helped implement Sonar priority
+		* Helped implement zoning to send another sound cue when they move forward or backward
+		* Helped implement the buzzer logic to make the system stop issuing sound cues when the sonar
 		with the highest priority remains in the same position
-		- Helped setup Raspbian and the camera
-- Richard Rangel
-		- Helped implement multiple sonar sensor code
-		- Helped implement zoning functionality in the case of movement on the same sonar
-		- Helped construct mock display for the system
-- Tasmiyah Qazi
-		- Raspberry Pi facial recognition with OpenCV and camera functionality
-		- Raspberry Pi speaker interface and code
-		- Single sonar sensor functionality and code
-		- Helped with SD card module interface with Arduino Uno
+		* Helped setup Raspbian and the camera
+* Richard Rangel
+		* Helped implement multiple sonar sensor code
+		* Helped implement zoning functionality in the case of movement on the same sonar
+		* Helped construct mock display for the system
+* Tasmiyah Qazi
+		* Raspberry Pi facial recognition with OpenCV and camera functionality
+		* Raspberry Pi speaker interface and code
+		* Single sonar sensor functionality and code
+		* Helped with SD card module interface with Arduino Uno
 
