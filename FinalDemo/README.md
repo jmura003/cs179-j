@@ -4,6 +4,8 @@ A wearable aid device for assisting anyone with visual impairments. It contains:
 
 Face detection is used in order to store people in a contact list form and inform the user who is approaching. The intent is for the blind individual to know who they are talking to or who is approaching them. This concept can eventually be expanded upon to recognize strangers through reverse image-search for future prototypes. These devices will communicate about who is approaching with the user through separate speakers.
 
+These are the final versions of our code used in our final demonstration.
+
 ## Getting Started
 
 # Authors
