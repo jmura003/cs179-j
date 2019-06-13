@@ -98,8 +98,9 @@ void loop() {
 
   sonar_no = 1;
 
-  sonar_no = PrioritySonar(init_dist);
+  sonar_no = PrioritySonar(init_dist); //sonar_no of sonar with closest distance
 
+  //use sonar_no to output appropriate sound cue
   if(sonar_no == 1)
     sensors(trigPin1, echoPin1, sonar_no);
   if(sonar_no == 2)
@@ -166,6 +167,11 @@ int sensors2(const int trigPin, const int echoPin, const int sonar_no) {
   return s_distance2;
 }
 
+//Function takes parameter s_d1, which is the distance from the
+//sensor function
+//this function is the state machine logic to stop initiating a
+//sound cue if the sonar_no remains the same. will initiate another sound cue
+//if position moves to a different zone or sonar_no changes
 void buzzer_logic(const int s_d1){
     bool diff_sonar = true;
     if(!same_sonar){
@@ -251,6 +257,8 @@ void buzzer_logic(const int s_d1){
       flag = 0;
 }
 
+//returns the index of the sonar recording 
+//the smallest distance
 int PrioritySonar(const long * distances){
   long temp_d = distances[0];
   for(int i = 0; i < sonars; i++)
@@ -262,6 +270,9 @@ int PrioritySonar(const long * distances){
 }
 
 //checking zone size of 25
+//range check to know if another 
+//sound cue should be initated when 
+//zone changes
 int zone_check(const long s_d1){
   if(s_d1 > 0.0 && s_d1 < 25.0)
       return 1;
