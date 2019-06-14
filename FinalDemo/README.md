@@ -35,7 +35,7 @@ These are the final versions of our code used in our final demonstration:
 	* Single sonar sensor functionality and code
 	* Helped with SD card module interface with Arduino Uno
 
-### Refernces
+### References
 Tutorials and online resources:
 * [Raspberry Pi facial recognition](https://www.hackster.io/mjrobot/real-time-face-recognition-an-end-to-end-project-a10826)
 * [Single ultrasonic sensor](https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/)
