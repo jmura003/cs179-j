@@ -6,6 +6,8 @@ Based on original code by Anirban Kar: https://github.com/thecodacus/Face-Recogn
 
 Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18  
 
+CREDIT: https://www.hackster.io/mjrobot/real-time-face-recognition-an-end-to-end-project-a10826
+
 '''
 
 import cv2
