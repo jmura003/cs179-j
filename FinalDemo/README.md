@@ -9,7 +9,9 @@ These are the final versions of our code used in our final demonstration:
 * Third Eye.jpg - a picture of our project. 
 * face_recog.py - the script that is ran on the Raspberry Pi for running facial detection and sending sound cues. 
 * sensor_with_speaker.ino - the script that is ran on the Arduino Uno for recognizing four sonars, priority detection, and sending sound cues.
-
+* face_dataset.py - the script that is run if you want to add a new face for detection in your contact's list.
+* faceScript.sh - the script that runs all the necessary commands to run face_recog.py as soon as the Raspberry Pi starts up.
+* face_training.py - the script that is run after a new face is added to the dataset, which uses the pre-trained model.
 
 ### Authors
 
