@@ -36,10 +36,16 @@ These are the final versions of our code used in our final demonstration:
 	* Helped with SD card module interface with Arduino Uno
 
 ### References
-Tutorials and online resources:
+Tutorials and online resources we used:
 * [Raspberry Pi facial recognition](https://www.hackster.io/mjrobot/real-time-face-recognition-an-end-to-end-project-a10826)
+	* https://www.hackster.io/mjrobot/real-time-face-recognition-an-end-to-end-project-a10826
 * [Single ultrasonic sensor](https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/)
+	* (https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/)
 * [Convert text to speech](https://soundoftext.com/)
+	* (https://soundoftext.com/)
 * [Convert MP3 to WAV](https://audio.online-convert.com/convert-to-wav)
+	* (https://audio.online-convert.com/convert-to-wav)
 * [Arduino library to play from audio files](https://github.com/TMRh20/TMRpcm)
+	* (https://github.com/TMRh20/TMRpcm)
 * [Audio jack breakout wiring](https://learn.sparkfun.com/tutorials/mbed-starter-kit-experiment-guide/experiment-9-pwm-sounds)
+	* (https://learn.sparkfun.com/tutorials/mbed-starter-kit-experiment-guide/experiment-9-pwm-sounds)
